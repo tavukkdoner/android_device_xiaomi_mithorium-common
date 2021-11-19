@@ -41,5 +41,6 @@ service vendor.thermal-hal /vendor/bin/hw/android.hardware.thermal-service.qti.x
 	user root
 	group root
 
-on property:sys.boot_completed=1
+on boot
+    wait /sys/kernel/boot_adsp/boot
     restart vendor.thermal-hal
