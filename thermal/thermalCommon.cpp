@@ -31,7 +31,7 @@
 /*
  * Changes from Qualcomm Innovation Center are provided under the following license:
  *
- * Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
 
@@ -245,16 +245,17 @@ int ThermalCommon::initialize_sensor(struct target_therm_cfg& cfg, int sens_idx)
 	sensor.lastThrottleStatus = sensor.t.throttlingStatus =
 		ThrottlingSeverity::NONE;
 	sensor.thresh.type = sensor.t.type = cfg.type;
+	sensor.throt_severity = cfg.throt_severity;
 	for (idx = 0; idx <= (size_t)ThrottlingSeverity::SHUTDOWN; idx++) {
 		sensor.thresh.hotThrottlingThresholds.push_back(UNKNOWN_TEMPERATURE);
 		sensor.thresh.coldThrottlingThresholds.push_back(UNKNOWN_TEMPERATURE);
 	}
 
 	if (cfg.throt_thresh != 0 && cfg.positive_thresh_ramp)
-		sensor.thresh.hotThrottlingThresholds[(size_t)ThrottlingSeverity::SEVERE] =
+		sensor.thresh.hotThrottlingThresholds[(size_t)sensor.throt_severity] =
 			cfg.throt_thresh / (float)sensor.mulFactor;
 	else if (cfg.throt_thresh != 0 && !cfg.positive_thresh_ramp)
-		sensor.thresh.coldThrottlingThresholds[(size_t)ThrottlingSeverity::SEVERE] =
+		sensor.thresh.coldThrottlingThresholds[(size_t)sensor.throt_severity] =
 			cfg.throt_thresh / (float)sensor.mulFactor;
 
 	if (cfg.shutdwn_thresh != 0 && cfg.positive_thresh_ramp)
