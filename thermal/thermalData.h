@@ -30,7 +30,7 @@
 
  /* Changes from Qualcomm Innovation Center are provided under the following license:
 
-Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
 SPDX-License-Identifier: BSD-3-Clause-Clear */
 
 #ifndef THERMAL_THERMAL_DATA_H__
@@ -68,6 +68,7 @@ using ::aidl::android::hardware::thermal::ThrottlingSeverity;
 		int throt_thresh;
 		int shutdwn_thresh;
 		bool positive_thresh_ramp;
+		ThrottlingSeverity throt_severity = ThrottlingSeverity::SEVERE;
 	};
 
 	struct therm_sensor {
@@ -78,6 +79,7 @@ using ::aidl::android::hardware::thermal::ThrottlingSeverity;
 		ThrottlingSeverity lastThrottleStatus;
 		Temperature t;
 		TemperatureThreshold thresh;
+		ThrottlingSeverity throt_severity;
 	};
 
 	struct therm_cdev {
