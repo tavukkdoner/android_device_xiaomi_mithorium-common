@@ -30,12 +30,16 @@
 # Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
-service android.thermal-hal /vendor/bin/hw/android.hardware.thermal@2.0-service.qti.xiaomi_mithorium
-	interface android.hardware.thermal@1.0::IThermal default
-	interface android.hardware.thermal@2.0::IThermal default
+#Changes from Qualcomm Innovation Center are provided under the following license:
+
+#Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+#SPDX-License-Identifier: BSD-3-Clause-Clear
+
+service vendor.thermal-hal /vendor/bin/hw/android.hardware.thermal-service.qti.xiaomi_mithorium
+	interface aidl android.hardware.thermal.IThermal/default
 	class hal
 	user root
 	group root
 
 on property:sys.boot_completed=1
-    restart android.thermal-hal
+    restart vendor.thermal-hal
