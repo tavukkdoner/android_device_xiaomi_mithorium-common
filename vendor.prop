@@ -158,6 +158,9 @@ persist.vendor.bluetooth.modem_nv_support=true
 #property to enable narrow search range for video encoding
 vendor.vidc.enc.narrow.searchrange=1
 
+#Enable turbo mode to video hardware
+vendor.vidc.debug.turbo=1
+
 #force HAL1 for below packages
 vendor.camera.hal1.packagelist=com.facebook.katana,com.facebook.orca,com.instagram.android,com.viber.voip,com.whatsapp
 
