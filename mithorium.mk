@@ -549,6 +549,7 @@ MITHORIUM_PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libcrypto-v33 \
     libprotobuf-cpp-full-3.9.1-vendorcompat
 
 # Soong namespaces
