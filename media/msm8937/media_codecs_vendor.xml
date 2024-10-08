@@ -167,6 +167,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="489600" />
             <Limit name="bitrate" range="1-20000000" />
             <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
             <Limit name="concurrent-instances" max="8" />
             <Feature name="can-swap-width-height" />
             <!-- <Limit name="performance-point-1920x1088" value="30" /> -->
@@ -181,6 +182,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="244800" />
             <Limit name="bitrate" range="1-20000000" />
             <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
             <Limit name="concurrent-instances" max="8" />
             <Limit name="performance-point-1920x1088" value="30" />
         </MediaCodec>
@@ -194,6 +196,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="blocks-per-second" min="1" max="244800" />
             <Limit name="bitrate" range="1-20000000" />
             <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
             <Limit name="concurrent-instances" max="8" />
             <Limit name="performance-point-1920x1088" value="30" />
         </MediaCodec>
