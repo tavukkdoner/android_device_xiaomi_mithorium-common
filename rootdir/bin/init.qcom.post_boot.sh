@@ -2900,6 +2900,14 @@ case "$target" in
                          echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
                          echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/rtg_boost_freq
                          echo 768000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
+						 
+                         #sdm439 schedtune.boost and schedtune.prefer_idle
+                         echo 60 > /dev/stune/top-app/schedtune.boost
+                         echo 1 > /dev/stune/top-app/schedtune.prefer_idle
+                         echo 30 > /dev/stune/foreground/schedtune.boost
+                         echo 1 > /dev/stune/foreground/schedtune.prefer_idle
+                         #echo 30 > /dev/stune/background/schedtune.boost
+                         #echo 1 > /dev/stune/background/schedtune.prefer_idle
                      else
                          # configure schedutil governor settings
                          # enable governor for perf cluster
