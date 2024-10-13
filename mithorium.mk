@@ -23,6 +23,9 @@ endif
 # DeviceAsWebcam
 TARGET_BUILD_DEVICE_AS_WEBCAM := true
 
+# FaceUnlock
+TARGET_FACE_UNLOCK_SUPPORTED := false
+
 # Kernel
 TARGET_KERNEL_VERSION ?= 4.9
 
