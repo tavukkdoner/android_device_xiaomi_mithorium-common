@@ -401,11 +401,11 @@ on property:sys.boot_completed=1
     #Reinit lmkd to reconfigure lmkd properties
     setprop lmkd.reinit 1
 
-on property:persist.vendor.radio.atfwd.start=false
-    stop vendor.atfwd
+#on property:persist.vendor.radio.atfwd.start=false
+#    stop vendor.atfwd
 
-on property:vendor.radio.atfwd.start=false
-    stop vendor.atfwd
+#on property:vendor.radio.atfwd.start=false
+#    stop vendor.atfwd
 
 # corefile limit
 on property:persist.debug.trace=1
@@ -510,10 +510,10 @@ on property:sys.boot_completed=1
 on property:ro.vendor.ril.mbn_copy_completed=1
     write /data/vendor/radio/copy_complete 1
 
-service vendor.atfwd /vendor/bin/ATFWD-daemon
-    class late_start
-    user system
-    group system radio
+#service vendor.atfwd /vendor/bin/ATFWD-daemon
+#    class late_start
+#    user system
+#    group system radio
 
 service vendor.ssr_diag /system/vendor/bin/ssr_diag
     class late_start
