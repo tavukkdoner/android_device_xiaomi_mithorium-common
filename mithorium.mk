@@ -287,7 +287,8 @@ MITHORIUM_PRODUCT_PACKAGES += \
 # DRM
 MITHORIUM_PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.4.vendor
+    android.hardware.drm@1.4.vendor \
+    libcrypto_shim
 
 # Dumpstate
 MITHORIUM_PRODUCT_PACKAGES += \
@@ -549,7 +550,6 @@ MITHORIUM_PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libcrypto-v33 \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
