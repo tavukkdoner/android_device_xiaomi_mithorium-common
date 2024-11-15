@@ -21,15 +21,24 @@ debug.sf.enable_transaction_tracing=false
 debug.sf.enable_gl_backpressure=1
 debug.sf.enable_layer_caching=1
 debug.sf.use_phase_offsets_as_durations=1
-#debug.sf.late.sf.duration=10500000 #10.5ms
-debug.sf.late.sf.duration=12000000 #12ms
-debug.sf.late.app.duration=20500000 #20.5ms
-debug.sf.early.sf.duration=21000000 #21ms
-#debug.sf.early.app.duration=16500000 #16.5ms
-debug.sf.early.app.duration=17600000 #17.6ms
-#debug.sf.earlyGl.sf.duration=13500000 #13.5ms
-debug.sf.earlyGl.sf.duration=17600000 #17.6ms
-debug.sf.earlyGl.app.duration=21000000 #21ms
+#10.5ms
+#debug.sf.late.sf.duration=10500000
+#12ms
+debug.sf.late.sf.duration=12000000
+#20.5ms
+debug.sf.late.app.duration=20500000
+#21ms
+debug.sf.early.sf.duration=21000000
+#16.5ms
+#debug.sf.early.app.duration=16500000
+#17.6ms
+debug.sf.early.app.duration=17600000
+#13.5ms
+#debug.sf.earlyGl.sf.duration=13500000
+#17.6ms
+debug.sf.earlyGl.sf.duration=17600000
+#21ms
+debug.sf.earlyGl.app.duration=21000000
 debug.sf.layer_caching_active_layer_timeout_ms=2000
 debug.sf.recomputecrop=0
 
