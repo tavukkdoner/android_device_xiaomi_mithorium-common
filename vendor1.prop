@@ -39,6 +39,8 @@ debug.sf.early.app.duration=17600000
 debug.sf.earlyGl.sf.duration=17600000
 #21ms
 debug.sf.earlyGl.app.duration=21000000
+#21ms
+debug.sf.hwc.min.duration=21000000
 debug.sf.layer_caching_active_layer_timeout_ms=2000
 debug.sf.recomputecrop=0
 
