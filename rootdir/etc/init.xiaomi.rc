@@ -144,11 +144,11 @@ on property:ro.vendor.xiaomi.enable_write_caching=1
     write /proc/sys/vm/dirty_expire_centisecs 60000
     write /proc/sys/vm/dirty_writeback_centisecs 60000
 
-service FlymeHW /system/bin/sh -c "service call SurfaceFlinger 1008 i32 1"
+service disable_hw /system/bin/sh -c "service call SurfaceFlinger 1008 i32 1"
     seclabel u:r:shell:s0
     user root
     oneshot
     disabled
 
-on property:sys.boot_completed=1
-    start FlymeHW
+on property:sys.boot_completed=1 && property:vendor.hwc.disabled=1
+    start disable_hw
