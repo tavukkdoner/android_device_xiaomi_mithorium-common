@@ -19,7 +19,7 @@ debug.sf.auto_latch_unsignaled=true
 debug.sf.disable_backpressure=0
 debug.sf.enable_transaction_tracing=false
 debug.sf.enable_gl_backpressure=1
-debug.sf.enable_layer_caching=1
+debug.sf.enable_layer_caching=0
 debug.sf.use_phase_offsets_as_durations=1
 #10.5ms
 #debug.sf.late.sf.duration=10500000
