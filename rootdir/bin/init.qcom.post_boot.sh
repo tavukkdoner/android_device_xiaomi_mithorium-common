@@ -2902,22 +2902,22 @@ case "$target" in
                          echo 768000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
 						 
                          #sdm439 schedtune.boost and schedtune.prefer_idle
-                         echo 60 > /dev/stune/top-app/schedtune.boost
-                         echo 1 > /dev/stune/top-app/schedtune.prefer_idle
-                         echo 30 > /dev/stune/foreground/schedtune.boost
-                         echo 1 > /dev/stune/foreground/schedtune.prefer_idle
+                         #echo 60 > /dev/stune/top-app/schedtune.boost
+                         #echo 1 > /dev/stune/top-app/schedtune.prefer_idle
+                         #echo 30 > /dev/stune/foreground/schedtune.boost
+                         #echo 1 > /dev/stune/foreground/schedtune.prefer_idle
                          #echo 30 > /dev/stune/background/schedtune.boost
                          #echo 1 > /dev/stune/background/schedtune.prefer_idle
 						 
                          #cpuset params
-                         echo 2-7 > /dev/cpuset/top-app/cpus
-                         echo 0-3 > /dev/cpuset/background/cpus
-                         echo 0-5 > /dev/cpuset/foreground/cpus
-                         echo 0-3 > /dev/cpuset/system-background/cpus
-                         echo 1 > /dev/cpuset/memory_pressure_enabled
-                         echo "conservative" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-                         echo "conservative" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-                         echo 0 > /dev/cpuset/cpu_exclusive
+                         #echo 2-7 > /dev/cpuset/top-app/cpus
+                         #echo 0-3 > /dev/cpuset/background/cpus
+                         #echo 0-5 > /dev/cpuset/foreground/cpus
+                         #echo 0-3 > /dev/cpuset/system-background/cpus
+                         #echo 1 > /dev/cpuset/memory_pressure_enabled
+                         #echo "conservative" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+                         #echo "conservative" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
+                         #echo 0 > /dev/cpuset/cpu_exclusive
                          #echo 1 > /dev/cpuset/foreground/cpu_exclusive
                      else
                          # configure schedutil governor settings
