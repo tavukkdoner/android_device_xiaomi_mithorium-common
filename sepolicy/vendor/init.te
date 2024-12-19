@@ -14,3 +14,6 @@ allow init sysfs_kernel_sdhci_msm:file w_file_perms;
 
 # SoC info
 r_dir_file(init, sysfs_socinfo)
+
+allow init per_boot_file:file ioctl;
+allowxperm init per_boot_file:file ioctl { F2FS_IOC_SET_PIN_FILE };
