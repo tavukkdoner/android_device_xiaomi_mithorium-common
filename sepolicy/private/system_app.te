@@ -2,3 +2,6 @@
 allow system_app sysfs_zram:dir r_dir_perms;
 allow system_app sysfs_zram:file r_file_perms;
 allow system_app storaged:binder { call };
+
+# Allow systemapps to check incremental progress 
+get_prop(system_app, incremental_prop)
