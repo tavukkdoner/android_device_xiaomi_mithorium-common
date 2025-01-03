@@ -23,6 +23,8 @@ vendor.camera.lowpower.record.enable	u:object_r:camera_prop:s0
 vidc.enc.dcvs.extra-buff-count		u:object_r:camera_prop:s0
 
 # Dirac
+audio.dirac.                        u:object_r:dirac_prop:s0
+audio.dirac.logging                 u:object_r:dirac_prop:s0
 persist.audio.dirac.       u:object_r:dirac_prop:s0
 
 # Subsystem state notifier
