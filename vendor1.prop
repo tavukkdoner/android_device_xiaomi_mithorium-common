@@ -4,6 +4,9 @@ vendor.qcom.bluetooth.soc=pronto
 # Camera
 persist.vendor.camera.HAL3.enabled=1
 
+# Dirac
+audio.dirac.logging=0
+
 # Display
 debug.composition.type=gpu
 debug.sf.enable_hwc_vds=1
