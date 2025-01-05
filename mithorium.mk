@@ -496,8 +496,6 @@ MITHORIUM_PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.recovery.qcom.rc \
-    init.recovery.qcom1.rc \
-    init.recovery.qcom2.rc \
     init.target.rc \
     init.uclamp.rc \
     init.xiaomi.rc \

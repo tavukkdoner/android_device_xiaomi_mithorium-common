@@ -48,20 +48,6 @@ prebuilt_etc {
     vendor: true,
 }
 
-prebuilt_etc {
-    name: "init.recovery.qcom1.rc",
-    filename: "init.recovery.qcom1.rc",
-    src: "etc/init.recovery.qcom1.rc",
-    install_in_root: true,
-}
-
-prebuilt_root {
-    name: "init.recovery.qcom2.rc",
-    filename: "init.recovery.qcom2.rc",
-    src: "etc/init.recovery.qcom2.rc",
-    install_in_root: true,
-}
-
 // Configuration scripts
 
 sh_binary {
