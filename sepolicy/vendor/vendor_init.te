@@ -42,5 +42,6 @@ userdebug_or_eng(`
 set_prop(vendor_init, vendor_video_prop);
 set_prop(vendor_init, dirac_prop);
 set_prop(vendor_init, vendor_audio_prop);
+set_prop(vendor_init, vendor_radio_prop);
 
 allow vendor_init dirac_prop:property_service set;
