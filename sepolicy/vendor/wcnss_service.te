@@ -1,3 +1,4 @@
 #get_prop(wcnss_service, serialno_prop);
 allow wcnss_service init:unix_stream_socket { connectto };
 set_prop(wcnss_service, vendor_wifi_prop);
+allow wcnss_service wifi_data_file:dir { search read open };
