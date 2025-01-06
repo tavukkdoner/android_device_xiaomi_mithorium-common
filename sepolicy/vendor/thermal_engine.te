@@ -1,6 +1,4 @@
 allow thermal-engine sysfs:dir r_dir_perms;
 
-get_prop(thermal-engine, system_prop);
-
 dontaudit thermal-engine property_socket:sock_file write;
 dontaudit thermal-engine init:unix_stream_socket connectto;
