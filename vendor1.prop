@@ -74,7 +74,6 @@ vendor.usb.use_gadget_hal=1
 af.fast_track_multiplier=1
 audio.offload.min.duration.secs=30
 drm.service.enabled=true
-persist.backup.ntpServer=0.pool.ntp.org
 persist.vendor.audio.hw.binder.size_kbyte=1024
 persist.vendor.audio.speaker.prot.enable=false
 persist.vendor.qcom.bluetooth.enable.splita2dp=false
