@@ -31,9 +31,6 @@ persist.audio.dirac.       u:object_r:dirac_prop:s0
 vendor.ril.                                     u:object_r:vendor_radio_prop:s0
 rild.libpath                                    u:object_r:vendor_radio_prop:s0
 
-# Sensors
-persist.vendor.cts.sensors                 u:object_r:vendor_cts_sensors_prop:s0
-
 # Subsystem state notifier
 vendor.subsys_state_notifier.		u:object_r:vendor_subsys_state_notifier_prop:s0
 
