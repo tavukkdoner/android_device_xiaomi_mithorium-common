@@ -150,5 +150,5 @@ service disable_hw /system/bin/sh -c "service call SurfaceFlinger 1008 i32 1"
     oneshot
     disabled
 
-on property:sys.boot_completed=1 && property:vendor.hwc.disabled=1
+on property:sys.boot_completed=1 && property:vendor.hwc.disabled=1 && property:vendor.media.omx="" && property:debug.stagefright.c2inputsurface=""
     start disable_hw
