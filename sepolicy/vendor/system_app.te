@@ -7,6 +7,5 @@ allow system_app {
     hal_vibrator_default
     hal_wifi_default
     hal_wifi_supplicant_default
-    netd
     wificond
 }:binder { call };
