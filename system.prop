@@ -126,6 +126,3 @@ video.accelerate.hw=1
 
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
-
-# USB
-ro.usb.uvc.payload_transfer_size=1024
