@@ -133,11 +133,6 @@ TARGET_SUPPORT_HAL1 := false
 TARGET_TS_MAKEUP := true
 TARGET_USES_YCRCB_CAMERA_ENCODE := true
 
-# Display
-TARGET_USES_GRALLOC1 := true
-TARGET_USES_HWC2 := true
-TARGET_USES_ION := true
-
 ifneq ($(TARGET_USES_Q_DISPLAY_STACK),true)
 TARGET_USES_GRALLOC4 := true
 TARGET_USES_QTI_MAPPER_2_0 := true
@@ -191,6 +186,9 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 # Init
 TARGET_INIT_VENDOR_LIB ?= //$(COMMON_PATH):init_xiaomi_mithorium
 TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_mithorium
+
+# Media
+TARGET_USES_ION := true
 
 # Partitions
 TARGET_COPY_OUT_VENDOR := vendor

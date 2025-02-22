@@ -263,7 +263,7 @@ MITHORIUM_PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
     vendor.qti.hardware.display.composer@3.1.vendor \
     vendor.qti.hardware.display.composer@3.2.vendor \
-    hwcomposer.$(TARGET_BOARD_PLATFORM)
+    hwcomposer.qcom
 
 MITHORIUM_PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
