@@ -132,13 +132,13 @@ MITHORIUM_PRODUCT_PACKAGES += \
 MITHORIUM_PRODUCT_PACKAGES += \
     libaudiopreprocessing \
     libaudioroute \
-    libaacwrapper \
     libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
     libvolumelistener \
-    libtinycompress
+    libtinycompress \
+    libwfdaac_vendor
 
 MITHORIUM_PRODUCT_PACKAGES += \
     liba2dpoffload \
