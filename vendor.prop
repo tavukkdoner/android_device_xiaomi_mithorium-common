@@ -18,6 +18,7 @@ debug.mdpcomp.logs=0
 dev.pm.dyn_samplingrate=1
 debug.enable.sglscale=1
 debug.performance.tuning=1
+debug.hwui.app_memory_policy=extremelowram
 debug.sf.enable_transaction_tracing=false
 debug.sf.disable_backpressure=0
 debug.sf.auto_latch_unsignaled=true
