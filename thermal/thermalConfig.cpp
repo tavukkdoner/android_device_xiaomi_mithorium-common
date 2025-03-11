@@ -497,7 +497,7 @@ namespace implementation {
 		},
 		{
 			TemperatureType::SKIN,
-			{ "quiet-therm-usr" },
+			{ "pa-therm0-usr" },
 			"skin",
 			40000,
 			95000,
@@ -1361,6 +1361,7 @@ namespace implementation {
 		{475, sensor_cfg_yupik}, // yupik
 		{515, sensor_cfg_yupik}, // YUPIK-LTE
 		{486, sensor_cfg_monaco}, // monaco
+		{517, sensor_cfg_monaco}, // monaco
 	};
 
 	const std::unordered_map<int, std::vector<struct target_therm_cfg>>
