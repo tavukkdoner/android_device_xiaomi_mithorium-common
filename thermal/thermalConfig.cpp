@@ -422,6 +422,61 @@ namespace implementation {
 		"cpuss-1-usr",
 	};
 
+	std::vector<std::string> cpu_sensors_talos =
+	{
+		"cpuss-2-usr",
+		"cpuss-2-usr",
+		"cpuss-1-usr",
+		"cpuss-1-usr",
+		"cpuss-0-usr",
+		"cpuss-0-usr",
+		"cpu-1-0-usr",
+		"cpu-1-2-usr",
+	};
+
+	std::vector<struct target_therm_cfg>  sensor_cfg_talos_common =
+	{
+		{
+			TemperatureType::CPU,
+			cpu_sensors_talos,
+			"",
+			95000,
+			115000,
+			95000,
+			true,
+		},
+		{
+			TemperatureType::GPU,
+			{ "gpu-usr" },
+			"gpu",
+			95000,
+			115000,
+			95000,
+			true,
+		},
+		{
+			TemperatureType::SKIN,
+			{ "xo-therm-adc" },
+			"skin",
+			40000,
+			95000,
+			40000,
+			true,
+		},
+	};
+
+	std::vector<struct target_therm_cfg>  sensor_cfg_talos_specific = {
+		{
+			TemperatureType::BCL_PERCENTAGE,
+			{ "soc" },
+			"soc",
+			10,
+			2,
+			10,
+			false,
+		},
+	};
+
 	std::vector<struct target_therm_cfg> sensor_cfg_monaco =
 	{
 		{
@@ -1270,6 +1325,9 @@ namespace implementation {
 		{437, sensor_cfg_429},
 		{349, sensor_cfg_632},
 		{350, sensor_cfg_632},
+		{355, sensor_cfg_talos_common},
+		{377, sensor_cfg_talos_common},
+		{380, sensor_cfg_talos_common},
 		{321, sensor_cfg_sdm845},
 		{341, sensor_cfg_sdm845},
 		{417, sensor_cfg_bengal}, // bengal
@@ -1311,6 +1369,7 @@ namespace implementation {
 
 	const std::unordered_map<int, std::vector<struct target_therm_cfg>>
 		msm_soc_specific = {
+		{355, sensor_cfg_talos_specific},
 		{339, sensor_cfg_msmnile_specific},
 		{361, sensor_cfg_msmnile_specific},
 		{362, sensor_cfg_msmnile_specific},
@@ -1326,6 +1385,8 @@ namespace implementation {
 	const std::unordered_map<int, bool>
 		battery_bcl_cfg_disable_map = {
 		{367, true},
+		{377, true},
+		{380, true},
 	};
 
 	std::vector<struct target_therm_cfg> add_target_config(
