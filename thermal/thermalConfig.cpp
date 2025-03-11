@@ -26,6 +26,68 @@
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * Changes from Qualcomm Innovation Center are provided under the following license:
+ *
+ * Copyright (c) 2022, Qualcomm Innovation Center, Inc. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ *	* Redistributions of source code must retain the above copyright
+ *	  notice, this list of conditions and the following disclaimer.
+ *	* Redistributions in binary form must reproduce the above
+ *	  copyright notice, this list of conditions and the following
+ *	  disclaimer in the documentation and/or other materials provided
+ *	  with the distribution.
+ *	* Neither the name of Qualcomm Innovation Center, Inc. nor the
+ *	  names of its contributors may be used to endorse or promote products
+ *	  derived from this software without specific prior written permission.
+ *
+ *
+ * NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED
+ * BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS
+ * AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDER
+ * OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ *
+ * Changes from Qualcomm Innovation Center are provided under the following license:
+ *
+ * Copyright (c) 2022, Qualcomm Innovation Center, Inc. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ *	* Redistributions of source code must retain the above copyright
+ *	  notice, this list of conditions and the following disclaimer.
+ *	* Redistributions in binary form must reproduce the above
+ *	  copyright notice, this list of conditions and the following
+ *	  disclaimer in the documentation and/or other materials provided
+ *	  with the distribution.
+ *	* Neither the name of Qualcomm Innovation Center, Inc. nor the
+ *	  names of its contributors may be used to endorse or promote products
+ *	  derived from this software without specific prior written permission.
+ *
+ *
+ * NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED
+ * BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS
+ * AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT HOLDER
+ * OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+ * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ *(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  */
 
 #include <unordered_map>
@@ -847,7 +909,7 @@ namespace implementation {
 		"cpu-1-3-usr",
 	};
 
-	std::vector<struct target_therm_cfg>  sensor_cfg_msmnile = {
+	std::vector<struct target_therm_cfg>  sensor_cfg_msmnile_common = {
 		{
 			TemperatureType::CPU,
 			cpu_sensors_kona,
@@ -884,6 +946,9 @@ namespace implementation {
 			40000,
 			true,
 		},
+	};
+
+	std::vector<struct target_therm_cfg>  sensor_cfg_msmnile_specific = {
 		{
 			TemperatureType::BCL_CURRENT,
 			{ "pm8150b-ibat-lvl0" },
@@ -1226,10 +1291,10 @@ namespace implementation {
 		{435, sensor_cfg_lito},
 		{459, sensor_cfg_lito},
 		{476, sensor_cfg_lito}, // orchid
-		{339, sensor_cfg_msmnile},
-		{361, sensor_cfg_msmnile},
-		{362, sensor_cfg_msmnile},
-		{367, sensor_cfg_msmnile},
+		{339, sensor_cfg_msmnile_common},
+		{361, sensor_cfg_msmnile_common},
+		{362, sensor_cfg_msmnile_common},
+		{367, sensor_cfg_msmnile_common},
 		{356, kona_common}, // kona
 		{415, lahaina_common}, // lahaina
 		{439, lahaina_common}, // lahainap
@@ -1246,6 +1311,9 @@ namespace implementation {
 
 	const std::unordered_map<int, std::vector<struct target_therm_cfg>>
 		msm_soc_specific = {
+		{339, sensor_cfg_msmnile_specific},
+		{361, sensor_cfg_msmnile_specific},
+		{362, sensor_cfg_msmnile_specific},
 		{356, kona_specific}, // kona
 		{415, lahaina_specific}, // lahaina
 		{439, lahaina_specific}, // lahainap
@@ -1253,6 +1321,11 @@ namespace implementation {
 		{501, lahaina_specific},
 		{502, lahaina_specific},
 		{450, shima_specific}, // shima
+	};
+
+	const std::unordered_map<int, bool>
+		battery_bcl_cfg_disable_map = {
+		{367, true},
 	};
 
 	std::vector<struct target_therm_cfg> add_target_config(
@@ -1273,6 +1346,7 @@ namespace implementation {
 	ThermalConfig::ThermalConfig():cmnInst()
 	{
 		std::unordered_map<int, std::vector<struct target_therm_cfg>>::const_iterator it;
+		std::unordered_map<int, bool>::const_iterator it_2;
 		std::vector<struct target_therm_cfg>::iterator it_vec;
 		bool bcl_defined = false;
 		std::string soc_val;
@@ -1315,12 +1389,13 @@ namespace implementation {
 				bcl_defined = true;
 		}
 
-		thermalConfig.push_back(bat_conf);
-/*
-		if (!bcl_defined)
-			thermalConfig.insert(thermalConfig.end(),
-				bcl_conf.begin(), bcl_conf.end());
-*/
+		it_2 = battery_bcl_cfg_disable_map.find(soc_id);
+		if (it_2 == battery_bcl_cfg_disable_map.end() || !it_2->second) {
+			thermalConfig.push_back(bat_conf);
+			if (!bcl_defined)
+				thermalConfig.insert(thermalConfig.end(),
+					bcl_conf.begin(), bcl_conf.end());
+		}
 		LOG(DEBUG) << "Total sensors:" << thermalConfig.size();
 	}
 }  // namespace implementation
