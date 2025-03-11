@@ -1360,6 +1360,16 @@ namespace implementation {
 		{507, sensor_cfg_holi}, // blair
 		{475, sensor_cfg_yupik}, // yupik
 		{515, sensor_cfg_yupik}, // YUPIK-LTE
+		{576, sensor_cfg_yupik}, // yupik qcm5430 modem
+		{575, sensor_cfg_yupik}, // yupik qcm5430
+		{567, sensor_cfg_yupik}, // yupik
+		{563, sensor_cfg_yupik}, // yupik
+		{553, sensor_cfg_yupik}, // yupik
+		{546, sensor_cfg_yupik}, // yupik
+		{499, sensor_cfg_yupik}, // yupik
+		{498, sensor_cfg_yupik}, // yupik-iot
+		{497, sensor_cfg_yupik}, // yupik-iot mdm
+		{488, sensor_cfg_yupik}, // yupik
 		{486, sensor_cfg_monaco}, // monaco
 		{517, sensor_cfg_monaco}, // monaco
 	};
