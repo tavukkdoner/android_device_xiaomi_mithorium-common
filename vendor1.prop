@@ -185,6 +185,7 @@ vendor.powerhal.config=powerhint.json
 
 #HWUI Renderer
 debug.hwui.renderer=skiagl
+debug.hwui.skip_eglmanager_telemetry=true
 
 #Enable Experimental ANGLE developer option
 debug.graphics.angle.developeroption.enable=true
