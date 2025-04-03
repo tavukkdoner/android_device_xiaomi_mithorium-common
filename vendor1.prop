@@ -23,7 +23,7 @@ debug.sf.auto_latch_unsignaled=true
 debug.sf.disable_backpressure=0
 debug.sf.enable_transaction_tracing=false
 debug.sf.enable_gl_backpressure=1
-debug.sf.enable_layer_caching=0
+debug.sf.enable_layer_caching=1
 debug.sf.use_phase_offsets_as_durations=1
 #12ms
 debug.sf.late.sf.duration=12000000
@@ -39,7 +39,7 @@ debug.sf.earlyGl.sf.duration=15500000
 debug.sf.earlyGl.app.duration=15600000
 #0ms
 debug.sf.hwc.min.duration=0
-debug.sf.layer_caching_active_layer_timeout_ms=2000
+debug.sf.layer_caching_active_layer_timeout_ms=4000
 debug.sf.recomputecrop=0
 
 persist.sys.ui.hw=1
