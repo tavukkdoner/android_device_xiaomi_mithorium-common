@@ -27,7 +27,9 @@ TARGET_BUILD_DEVICE_AS_WEBCAM := true
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := \
+    frameworks/base/boot/boot-image-profile.txt \
+    frameworks/base/boot/boot-image-profile-extra.txt
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 ART_BUILD_TARGET_NDEBUG := true
