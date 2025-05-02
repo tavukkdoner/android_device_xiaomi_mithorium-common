@@ -1,6 +1,3 @@
-# Camera
-vendor_internal_prop(vendor_camera_prop)
-
 # Baseband
 vendor_public_prop(baseband_prop);
 
