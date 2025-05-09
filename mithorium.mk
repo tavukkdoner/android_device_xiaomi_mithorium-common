@@ -614,6 +614,9 @@ MITHORIUM_PRODUCT_PACKAGES += \
     usb_compositions.conf \
     android.hardware.usb@1.3-service.basic \
     android.hardware.usb.gadget-service.qti
+	
+MITHORIUM_PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
 
 # Vibrator
 ifneq ($(TARGET_USES_DEVICE_SPECIFIC_VIBRATOR),true)
