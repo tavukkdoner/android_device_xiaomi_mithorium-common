@@ -367,6 +367,9 @@ MITHORIUM_PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0
 endif
 
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_mithorium)
+
 # Input
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/)
