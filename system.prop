@@ -140,3 +140,7 @@ persist.log.tag.b/223498680=S
 persist.log.tag.TrafficStats=S
 persist.log.tag.ContrastColorUtil=S
 persist.log.tag.OpenGLRenderer=S
+persist.log.tag.android.hardware.power-service-qti=S
+persist.log.tag.vendor.qti.vibrator=S
+persist.log.tag.imsd=S
+persist.log.tag.gsl=S
