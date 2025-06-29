@@ -42,6 +42,7 @@ endif
 TARGET_FACE_UNLOCK_SUPPORTED := false
 
 # Kernel
+PRODUCT_ENABLE_UFFD_GC := true
 TARGET_KERNEL_VERSION ?= 4.9
 
 # Platform
@@ -60,9 +61,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.opengles.version=196610 \
     vendor.usb.controller=7000000.dwc3
 endif
-
-# UFFD GC
-OVERRIDE_ENABLE_UFFD_GC := false
 
 # Permissions
 PRODUCT_COPY_FILES += \
