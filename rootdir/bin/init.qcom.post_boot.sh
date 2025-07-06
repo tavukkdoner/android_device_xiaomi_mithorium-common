@@ -3027,16 +3027,6 @@ case "$target" in
                 #disable sched_boost
                 echo 0 > /proc/sys/kernel/sched_boost
 
-  		#sdm439 schedtune.boost and schedtune.prefer_idle
-    		if [ $soc_id == "353" ]; then
-			echo 60 > /dev/stune/top-app/schedtune.boost
-			echo 1 > /dev/stune/top-app/schedtune.prefer_idle
-			echo 30 > /dev/stune/foreground/schedtune.boost
-			echo 1 > /dev/stune/foreground/schedtune.prefer_idle
-			#echo 30 > /dev/stune/background/schedtune.boost
-			#echo 1 > /dev/stune/background/schedtune.prefer_idle
-		fi
-  		
                 # Disable L2-GDHS low power modes
                 echo N > /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled
                 echo N > /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/suspend_enabled
