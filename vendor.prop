@@ -164,6 +164,9 @@ vendor.vidc.debug.turbo=1
 #Start HintManager
 vendor.powerhal.init=1
 
+#HWUI Renderer
+debug.hwui.renderer=skiagl
+
 #force HAL1 for below packages
 vendor.camera.hal1.packagelist=com.facebook.katana,com.facebook.orca,com.instagram.android,com.viber.voip,com.whatsapp
 
