@@ -190,8 +190,8 @@ debug.hwui.renderer=skiagl
 #Enable Experimental ANGLE developer option
 debug.graphics.angle.developeroption.enable=true
 
-# Disable HWC
-vendor.hwc.disabled=1
+#Disable HWC
+vendor.hwc.disabled=0
 
 #force HAL1 for below packages
 vendor.camera.hal1.packagelist=com.facebook.katana,com.facebook.orca,com.instagram.android,com.viber.voip,com.whatsapp
