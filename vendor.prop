@@ -183,6 +183,7 @@ vendor.powerhal.init=1
 vendor.powerhal.config=powerhint.json
 
 #HWUI Renderer
+debug.hwui.clip_surfaceviews=true
 debug.hwui.renderer=skiagl
 debug.hwui.skip_eglmanager_telemetry=true
 
