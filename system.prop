@@ -120,3 +120,6 @@ debug.renderengine.backend=skiaglthreaded
 
 # USAP 
 persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Enable Video Acceleration
+video.accelerate.hw=1

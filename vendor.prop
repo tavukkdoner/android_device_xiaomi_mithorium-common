@@ -22,7 +22,6 @@ debug.performance.tuning=1
 debug.composition.type=gpu
 
 persist.sys.ui.hw=1
-video.accelerate.hw=1
 ro.surface_flinger.clear_slots_with_set_layer_buffer=true
 
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
