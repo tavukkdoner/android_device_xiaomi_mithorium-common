@@ -164,6 +164,9 @@ vendor.vidc.debug.turbo=1
 #Start HintManager
 vendor.powerhal.init=1
 
+#Powerhal Config
+vendor.powerhal.config=powerhint.json
+
 #HWUI Renderer
 debug.hwui.renderer=skiagl
 
