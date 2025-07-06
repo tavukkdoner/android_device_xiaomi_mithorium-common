@@ -660,7 +660,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += $(MITHORIUM_PRODUCT_PACKAGES)
 
 # Inherit MiThorium HALs
-$(call inherit-product-if-exists, hardware/mithorium/mithorium_qcom_hals.mk)
+$(call inherit-product-if-exists, hardware/qcom-caf/msm8937/mithorium_qcom_hals.mk)
 
 # Wifi firmware symlinks
 ifneq ($(TARGET_EXCLUDE_DEFAULT_WIFI_FIRMWARE_SYMLINKS),true)
