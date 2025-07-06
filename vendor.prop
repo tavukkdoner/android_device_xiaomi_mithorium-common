@@ -5,21 +5,23 @@ vendor.qcom.bluetooth.soc=pronto
 persist.vendor.camera.HAL3.enabled=1
 
 # Display
+debug.composition.type=gpu
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=1
 debug.sf.latch_unsignaled=1
 debug.egl.hw=1
+#debug.egl.profiler=1
 debug.mdpcomp.logs=0
 dev.pm.dyn_samplingrate=1
 debug.enable.sglscale=1
+debug.performance.tuning=1
 debug.sf.enable_transaction_tracing=false
-debug.sf.recomputecrop=0
 debug.sf.disable_backpressure=1
 debug.sf.auto_latch_unsignaled=true
 #debug.sf.layer_caching_active_layer_timeout_ms=2000
 debug.performance.tuning=1
 #debug.egl.profiler=1
-debug.composition.type=gpu
+debug.sf.recomputecrop=0
 
 persist.sys.ui.hw=1
 ro.surface_flinger.clear_slots_with_set_layer_buffer=true
