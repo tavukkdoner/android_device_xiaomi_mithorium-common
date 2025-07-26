@@ -449,7 +449,7 @@ endif
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-cherish
 ifeq ($(TARGET_HAS_NO_RADIO),true)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-noradio
 else
@@ -572,7 +572,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/cherish/interfaces/power-libperfmgr \
     $(LOCAL_PATH)
 
 # Subsystem state notifier
