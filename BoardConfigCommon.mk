@@ -191,9 +191,6 @@ DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifest/q-display-stack.xml
 endif
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
-# Init
-TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_mithorium
-
 # Media
 TARGET_USES_ION := true
 
