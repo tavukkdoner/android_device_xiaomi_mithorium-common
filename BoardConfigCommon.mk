@@ -71,15 +71,6 @@ TARGET_KERNEL_CONFIG := \
     vendor/feature/kprobes.config \
     vendor/feature/lmkd.config
 
-TARGET_KERNEL_RECOVERY_CONFIG := \
-    vendor/$(TARGET_BOARD_PLATFORM)-perf_defconfig \
-    vendor/common.config \
-    vendor/feature/erofs.config \
-    vendor/feature/exfat.config \
-    vendor/feature/ntfs.config \
-    vendor/feature/no-camera-stack.config \
-    vendor/feature/no-wlan-driver.config
-
 ifeq ($(PRODUCT_SET_DEBUGFS_RESTRICTIONS),true)
 TARGET_KERNEL_CONFIG += \
     vendor/debugfs.config
