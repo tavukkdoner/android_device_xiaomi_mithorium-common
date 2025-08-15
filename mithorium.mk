@@ -454,7 +454,7 @@ endif
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-voltage
 ifeq ($(TARGET_HAS_NO_RADIO),true)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-noradio
 else
