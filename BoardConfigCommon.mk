@@ -241,10 +241,10 @@ BOARD_VNDK_VERSION := current
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
+BOARD_HOSTAPD_PRIVATE_LIB := //hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib:lib_driver_cmd_qcwcn
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := //hardware/qcom-caf/wlan/qcwcn/wpa_supplicant_8_lib:lib_driver_cmd_qcwcn
 PRODUCT_VENDOR_MOVE_ENABLED := true
 TARGET_HAS_BROKEN_WLAN_SET_INTERFACE := true
 WIFI_DRIVER_FW_PATH_AP := "ap"
