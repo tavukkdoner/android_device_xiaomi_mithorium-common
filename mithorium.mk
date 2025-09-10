@@ -651,6 +651,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+$(call soong_config_set_bool,wcnss_service,uses_qcom_wcnss_qmi,true)
+$(call soong_config_set,wcnss_service,wcnss_qmi_include_dir,$(LOCAL_PATH)/wifi/include)
+
 ifeq ($(TARGET_BOARD_PLATFORM),msm8953)
 PRODUCT_PACKAGES += WifiOverlay_5GHz
 endif
