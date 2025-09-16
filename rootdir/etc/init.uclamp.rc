@@ -4,9 +4,9 @@ on boot
     write /proc/sys/kernel/sched_util_clamp_min 128
 	
     # system-background
-    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 1
-    write /dev/cpuctl/system-background/cpu.uclamp.min 40
-    write /dev/cpuctl/system-background/cpu.uclamp.max 80
+    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 0
+    write /dev/cpuctl/system-background/cpu.uclamp.min 20
+    write /dev/cpuctl/system-background/cpu.uclamp.max 40
     # foreground
     write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 0
     write /dev/cpuctl/foreground/cpu.uclamp.min 20
@@ -29,9 +29,9 @@ on boot
     write /dev/cpuctl/camera-daemon/cpu.uclamp.min 40
     write /dev/cpuctl/camera-daemon/cpu.uclamp.max 80
     # system
-    write /dev/cpuctl/system/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/system/cpu.uclamp.latency_sensitive 0
     write /dev/cpuctl/system/cpu.uclamp.min 20
-    write /dev/cpuctl/system/cpu.uclamp.max 80
+    write /dev/cpuctl/system/cpu.uclamp.max 40
     # top-app
     write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
     write /dev/cpuctl/top-app/cpu.uclamp.min 20
@@ -39,4 +39,4 @@ on boot
     # background
     write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
     write /dev/cpuctl/background/cpu.uclamp.min 20
-    write /dev/cpuctl/background/cpu.uclamp.max 60
+    write /dev/cpuctl/background/cpu.uclamp.max 40
