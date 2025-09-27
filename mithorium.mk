@@ -15,6 +15,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # Bootanimation
 TARGET_BOOTANIMATION_HALF_RES := true
 
+# Camera
+$(call soong_config_set,libcameraservice,ext_lib,//$(LOCAL_PATH):libcameraservice_extension.mithorium)
+
 # DebugFS
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 PRODUCT_SET_DEBUGFS_RESTRICTIONS ?= true
