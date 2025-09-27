@@ -26,6 +26,9 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+# Camera
+TARGET_CAMERA_SERVICE_EXT_LIB := //$(DEVICE_PATH):libcameraservice_extension.mithorium
+
 # Dex
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 WITH_DEXPREOPT := true
