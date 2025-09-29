@@ -481,6 +481,8 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     android.hardware.power-service.lineage-libperfmgr
 	
+$(call soong_config_set,qtipower,interaction_boost,true)
+
 # Power
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
