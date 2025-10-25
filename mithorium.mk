@@ -42,7 +42,7 @@ ART_BUILD_HOST_DEBUG := false
 endif
 
 # FaceUnlock
-TARGET_FACE_UNLOCK_SUPPORTED := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := true
