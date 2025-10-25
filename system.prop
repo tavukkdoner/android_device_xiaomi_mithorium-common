@@ -205,3 +205,4 @@ persist.log.tag.DisplayFeatureHal=E
 persist.log.tag.qti_sensors_hal=E
 persist.log.tag.BluetoothAdapterService=E
 
+ro.paranoid.maintainer=tavukkdoner
