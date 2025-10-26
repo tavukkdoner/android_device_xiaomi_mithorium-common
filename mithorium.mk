@@ -694,5 +694,8 @@ endif
 
 $(call inherit-product, vendor/xiaomi/mithorium-common-graphics/mithorium-common-graphics-vendor.mk)
 
+# Signed build
+-include vendor/lineage-priv/keys/keys.mk
+
 # Extra
 EXTRA_DEVICE_BRACKET := low-end
