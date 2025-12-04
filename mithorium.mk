@@ -6,9 +6,6 @@
 
 TARGET_USES_XIAOMI_MITHORIUM_COMMON_TREE := true
 
-# Userspace Reboot
-$(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
-
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
