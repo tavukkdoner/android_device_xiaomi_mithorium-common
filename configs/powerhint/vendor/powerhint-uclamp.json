@@ -495,13 +495,13 @@
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "FGUclampMax",
             "Duration": 0,
-            "Value": "50"
+            "Value": "80"
         },
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "FGUclampMin",
             "Duration": 0,
-            "Value": "20"
+            "Value": "30"
         },
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -513,7 +513,7 @@
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "BGUclampMax",
             "Duration": 0,
-            "Value": "40"
+            "Value": "20"
         },
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -633,13 +633,13 @@
             "PowerHint": "INTERACTIVE",
             "Node": "TAUclampMax",
             "Duration": 0,
-            "Value": "80"
+            "Value": "100"
         },
         {
             "PowerHint": "INTERACTIVE",
             "Node": "TAUclampMin",
             "Duration": 0,
-            "Value": "20"
+            "Value": "50"
         },
         {
             "PowerHint": "INTERACTIVE",
@@ -651,13 +651,13 @@
             "PowerHint": "INTERACTIVE",
             "Node": "FGUclampMax",
             "Duration": 0,
-            "Value": "60"
+            "Value": "80"
         },
         {
             "PowerHint": "INTERACTIVE",
             "Node": "FGUclampMin",
             "Duration": 0,
-            "Value": "20"
+            "Value": "30"
         },
         {
             "PowerHint": "INTERACTIVE",
@@ -669,13 +669,13 @@
             "PowerHint": "INTERACTIVE",
             "Node": "BGUclampMax",
             "Duration": 0,
-            "Value": "40"
+            "Value": "20"
         },
         {
             "PowerHint": "INTERACTIVE",
             "Node": "BGUclampMin",
             "Duration": 0,
-            "Value": "20"
+            "Value": "0"
         },
         {
             "PowerHint": "INTERACTIVE",
@@ -819,7 +819,7 @@
             "PowerHint": "LAUNCH",
             "Node": "FGUclampMin",
             "Duration": 5000,
-            "Value": "20"
+            "Value": "30"
         },
         {
             "PowerHint": "LAUNCH",
@@ -831,13 +831,13 @@
             "PowerHint": "LAUNCH",
             "Node": "BGUclampMax",
             "Duration": 5000,
-            "Value": "40"
+            "Value": "20"
         },
         {
             "PowerHint": "LAUNCH",
             "Node": "BGUclampMin",
             "Duration": 5000,
-            "Value": "20"
+            "Value": "0"
         },
         {
             "PowerHint": "LAUNCH",
@@ -969,7 +969,7 @@
             "PowerHint": "FIXED_PERFORMANCE",
             "Node": "TAUclampMin",
             "Duration": 0,
-            "Value": "20"
+            "Value": "50"
         },
         {
             "PowerHint": "FIXED_PERFORMANCE",
@@ -981,13 +981,13 @@
             "PowerHint": "FIXED_PERFORMANCE",
             "Node": "FGUclampMax",
             "Duration": 0,
-            "Value": "60"
+            "Value": "80"
         },
         {
             "PowerHint": "FIXED_PERFORMANCE",
             "Node": "FGUclampMin",
             "Duration": 0,
-            "Value": "20"
+            "Value": "30"
         },
         {
             "PowerHint": "FIXED_PERFORMANCE",
@@ -999,13 +999,13 @@
             "PowerHint": "FIXED_PERFORMANCE",
             "Node": "BGUclampMax",
             "Duration": 0,
-            "Value": "40"
+            "Value": "20"
         },
         {
             "PowerHint": "FIXED_PERFORMANCE",
             "Node": "BGUclampMin",
             "Duration": 0,
-            "Value": "20"
+            "Value": "0"
         },
         {
             "PowerHint": "FIXED_PERFORMANCE",
