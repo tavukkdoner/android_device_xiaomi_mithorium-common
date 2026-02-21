@@ -478,7 +478,7 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
     android.hardware.power-service.lineage-libperfmgr
 	
-$(call soong_config_set_bool,qtipower,interaction_boost,true)
+$(call soong_config_set,qtipower,interaction_boost,true)
 
 # Power
 ifeq ($(UCLAMP_FEATURE_ENABLED),true)
