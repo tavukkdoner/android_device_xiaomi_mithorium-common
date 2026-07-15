@@ -204,4 +204,5 @@ persist.log.tag.AudioPolicyService=E
 persist.log.tag.DisplayFeatureHal=E
 persist.log.tag.qti_sensors_hal=E
 persist.log.tag.BluetoothAdapterService=E
+persist.log.tag.LOWI-9.0.0.89=E
 
