@@ -340,6 +340,7 @@ namespace implementation {
 			50000,
 			true,
 		},
+/*
 		{
 			TemperatureType::BCL_VOLTAGE,
 			{ "pmi-vbat-lvl0" },
@@ -367,6 +368,7 @@ namespace implementation {
 			10,
 			false,
 		},
+*/
 	};
 
 	std::vector<std::string> cpu_sensors_632 =
@@ -1278,6 +1280,7 @@ namespace implementation {
 		true,
 	};
 
+/*
 	std::vector<struct target_therm_cfg> bcl_conf = {
 		{
 			TemperatureType::BCL_VOLTAGE,
@@ -1298,6 +1301,7 @@ namespace implementation {
 			true,
 		},
 	};
+*/
 
 	const std::unordered_map<int, std::vector<struct target_therm_cfg>>
 		msm_soc_map = {
@@ -1460,9 +1464,9 @@ namespace implementation {
 		it_2 = battery_bcl_cfg_disable_map.find(soc_id);
 		if (it_2 == battery_bcl_cfg_disable_map.end() || !it_2->second) {
 			thermalConfig.push_back(bat_conf);
-			if (!bcl_defined)
+			/* if (!bcl_defined)
 				thermalConfig.insert(thermalConfig.end(),
-					bcl_conf.begin(), bcl_conf.end());
+					bcl_conf.begin(), bcl_conf.end()); */
 		}
 		LOG(DEBUG) << "Total sensors:" << thermalConfig.size();
 	}
