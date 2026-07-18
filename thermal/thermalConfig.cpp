@@ -335,9 +335,9 @@ namespace implementation {
 			TemperatureType::SKIN,
 			{ "quiet-therm-adc" },
 			"skin",
-			50000,
+			45000,
 			95000,
-			50000,
+			45000,
 			true,
 		},
 /*
