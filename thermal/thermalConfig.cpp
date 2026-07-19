@@ -1419,8 +1419,8 @@ namespace implementation {
 	{
 		std::unordered_map<int, std::vector<struct target_therm_cfg>>::const_iterator it;
 		std::unordered_map<int, bool>::const_iterator it_2;
-		std::vector<struct target_therm_cfg>::iterator it_vec;
-		bool bcl_defined = false;
+		//std::vector<struct target_therm_cfg>::iterator it_vec;
+		//bool bcl_defined = false;
 		std::string soc_val;
 		int ct = 0;
 		bool read_ok = false;
@@ -1455,11 +1455,11 @@ namespace implementation {
 			return;
 		}
 		thermalConfig = add_target_config(soc_id, it->second);
-		for (it_vec = thermalConfig.begin();
+		/* for (it_vec = thermalConfig.begin();
 				it_vec != thermalConfig.end(); it_vec++) {
 			if (it_vec->type == TemperatureType::BCL_PERCENTAGE)
 				bcl_defined = true;
-		}
+		} */
 
 		it_2 = battery_bcl_cfg_disable_map.find(soc_id);
 		if (it_2 == battery_bcl_cfg_disable_map.end() || !it_2->second) {
