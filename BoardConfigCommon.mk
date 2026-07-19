@@ -71,6 +71,8 @@ TARGET_KERNEL_CONFIG := \
     vendor/feature/kprobes.config \
     vendor/feature/lmkd.config
 
+TARGET_KERNEL_NO_GCC := true
+
 ifeq ($(PRODUCT_SET_DEBUGFS_RESTRICTIONS),true)
 TARGET_KERNEL_CONFIG += \
     vendor/debugfs.config
