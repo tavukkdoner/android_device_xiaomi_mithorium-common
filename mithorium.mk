@@ -622,7 +622,7 @@ endif
 # Thermal
 ifneq ($(TARGET_DISABLE_QTI_THERMAL_HAL),true)
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti.xiaomi_mithorium
+    android.hardware.thermal-service.qti.xiaomi_mithorium
 endif
 
 # USB
