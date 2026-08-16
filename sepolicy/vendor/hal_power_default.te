@@ -1,3 +1,4 @@
 allow hal_power_default device_latency:chr_file rw_file_perms;
 allow hal_power_default proc:file rw_file_perms;
 allow hal_power_default self:capability { kill sys_admin };
+allow hal_power_default vendor_hal_vnddisplayconfig_service:service_manager find;

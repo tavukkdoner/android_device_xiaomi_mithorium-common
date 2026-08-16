@@ -9,3 +9,5 @@ allow system_app {
     hal_wifi_supplicant_default
     wificond
 }:binder { call };
+
+binder_call(system_app, hal_rcsservice)
