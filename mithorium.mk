@@ -260,7 +260,7 @@ PRODUCT_PACKAGES += \
     gralloc.$(TARGET_BOARD_PLATFORM)
 
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor
+    lineage.frameworks.displayservice@1.0.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
@@ -283,6 +283,8 @@ PRODUCT_PACKAGES += \
     libEGL_adreno_libEGL_adreno_symlink64 \
     libGLESv2_adreno_libGLESv2_adreno_symlink64 \
     libq3dtools_adreno_libq3dtools_adreno_symlink64
+    
+$(call soong_config_set_bool,surfaceflinger,register_displayservice,true)
 
 # DRM
 PRODUCT_PACKAGES += \
