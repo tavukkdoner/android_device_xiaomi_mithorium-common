@@ -42,7 +42,6 @@ endif
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Kernel
-PRODUCT_ENABLE_UFFD_GC := true
 TARGET_KERNEL_VERSION ?= 4.9
 
 # Platform
