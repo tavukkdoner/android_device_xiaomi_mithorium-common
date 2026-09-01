@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MemoryLimiterConfig>
+  <version>1</version>
+  <configList>
+
+    <!-- Limits for 4GB RAM device [3200, 4800): 2G/1G/1G/1G -->
+    <limitSet>
+      <minimumRequiredMemTotal>3200</minimumRequiredMemTotal>
+      <maximumAllowedMemTotal>4800</maximumAllowedMemTotal>
+      <memVisible>2048</memVisible>
+      <memNotVisible>1024</memNotVisible>
+      <swapVisible>1024</swapVisible>
+      <swapNotVisible>1024</swapNotVisible>
+    </limitSet>
+
+    <!-- Limits for 3GB RAM device [2400, 3200): 1536M/768M/768M/768M -->
+    <limitSet>
+      <minimumRequiredMemTotal>2400</minimumRequiredMemTotal>
+      <maximumAllowedMemTotal>3200</maximumAllowedMemTotal>
+      <memVisible>1536</memVisible>
+      <memNotVisible>768</memNotVisible>
+      <swapVisible>768</swapVisible>
+      <swapNotVisible>768</swapNotVisible>
+    </limitSet>
+
+    <!-- Limits for 2GB RAM device [1600, 2400): 1024M/512M/512M/512M -->
+    <limitSet>
+      <minimumRequiredMemTotal>1600</minimumRequiredMemTotal>
+      <maximumAllowedMemTotal>2400</maximumAllowedMemTotal>
+      <memVisible>1024</memVisible>
+      <memNotVisible>512</memNotVisible>
+      <swapVisible>512</swapVisible>
+      <swapNotVisible>512</swapNotVisible>
+    </limitSet>
+
+  </configList>
+</MemoryLimiterConfig>
