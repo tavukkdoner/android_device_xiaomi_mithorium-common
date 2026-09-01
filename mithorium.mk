@@ -427,6 +427,12 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += libavservices_minijail.vendor
 
+# Memory Limiter
+ifeq ($(TARGET_HAS_ENABLED_MEM_LIMIT),true)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/mem_limiter/memory-limiter-config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/memory-limiter-config.xml
+endif
+    
 # Mountpoint
 PRODUCT_PACKAGES += \
     vendor_dsp_mountpoint \
