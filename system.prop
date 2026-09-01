@@ -127,6 +127,13 @@ video.accelerate.hw=1
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
 
+# MMD
+mmd.enabled_aconfig=true
+mmd.zram.enabled=true
+mmd.zram.size=75%
+mmd.zram.comp_algorithm=lz4
+mmd.zram.writeback.enabled=false
+
 # Logs
 persist.log.tag.AnalyticsService=S
 persist.log.tag.KernelCpuUidActiveTimeReader=S
