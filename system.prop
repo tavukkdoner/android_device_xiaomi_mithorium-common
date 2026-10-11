@@ -131,7 +131,7 @@ persist.backup.ntpServer=0.pool.ntp.org
 mmd.enabled_aconfig=true
 mmd.zram.enabled=true
 mmd.zram.size=75%
-mmd.zram.comp_algorithm=lz4
+mmd.zram.comp_algorithm=lzo-rle
 mmd.zram.writeback.enabled=false
 
 # Logs
