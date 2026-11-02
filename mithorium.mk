@@ -323,6 +323,14 @@ include $(LOCAL_PATH)/gps/gps_vendor_product.mk
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor
 
+# Graphics
+ifeq ($(TARGET_SUPPORTS_BLUR1),true)
+PRODUCT_PRODUCT_PROPERTIES += ro.surface_flinger.supports_background_blur=1
+PRODUCT_SYSTEM_PROPERTIES += debug.renderengine.backend=skiavkthreaded
+else
+PRODUCT_SYSTEM_PROPERTIES += debug.renderengine.backend=skiaglthreaded
+endif
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
@@ -390,6 +398,11 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.sdm
 
 $(call soong_config_set_bool,livedisplay_sdm,enable_dm,false)
+
+# Low Ram
+ifeq ($(TARGET_SUPPORTS_LOW_RAM),true)
+PRODUCT_PRODUCT_PROPERTIES += ro.config.low_ram=true
+endif
 
 # Media
 ifeq ($(TARGET_BOARD_PLATFORM),msm8953)
