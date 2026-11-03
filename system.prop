@@ -131,6 +131,9 @@ mmd.zram.size=75%
 mmd.zram.comp_algorithm=lzo-rle
 mmd.zram.writeback.enabled=false
 
+# Split Screen
+ro.config.force_multi_window=true
+
 # Logs
 persist.log.tag.AnalyticsService=S
 persist.log.tag.KernelCpuUidActiveTimeReader=S
